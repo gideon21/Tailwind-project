@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FANDOM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-white">
+    <header class="fixed bg-white w-full h-20  m-auto shadow ">
+        <div class="text-center p-5 sm:w-full md:w-full lg:w-full xl:w-full">
+            <h1 class="text-4xl font-bold text-left text-black md:text-center lg:text-center">FANDOM</h1>
+        </div>
+        <button onclick="openBtn()" class="absolute inset-y-3 bg-indigo-500 w-24 h-14 text-center font-semibold text-white rounded-md p-4 hover:bg-gray-500 cursor-pointer xl:inset-y-3 inset-3/4  md:mx-20 sm:mx-20 -m-3 my-0">About</button>
+    </header>
+
+    <div id="modal" class="fixed w-full h-full mt-20 backdrop-filter backdrop-blur-xl shadow hidden">
+        <div class=" bg-white w-5/6 h-auto m-auto mt-20 pb-10 rounded-lg border border-gray-200 lg:mt-52 lg:w-2/6 ">
+            <p class="font-medium leading-relaxed p-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            <button onclick="closeBtn()" class="text-white w-40 h-10 mt-5 text-lg font-semibold block m-auto bg-red-500 rounded-3xl hover:bg-gray-500">Close</button>
+        </div>
+    </div>
+
+    <!--Create 2 grid coloumns-->
+    <div class="grid lg:grid-cols-2  ">
+
+        <!--Style for col-1-->
+        <div class="p-5 text-left bg-fixed bg-center  w-full h-full lg:p-20" style="background-color: #1a1a1a; background-image: url('../src/images/bubbles.svg');">
+            <div class="text-left mt-20 space-y-2 pb-10 lg:space-y-5">
+            <p class="text-white text-4xl pb-5 lg:text-7xl font-extrabold"><span class="text-6xl lg:text-9xl">E</span>very game you have ever played</p>
+            <p class="text-2xl lg:text-4xl font-semibold"><span class="text-white">Build a  </span><span class="bg-blue-400 font-bold">community</span></p>
+            <p class="text-2xl lg:text-4xl font-semibold"><span class="text-white">Share your </span><span class="bg-yellow-400 font-bold">experience</span><span class="text-white"> with others</span></p>
+            <p class="text-2xl lg:text-4xl font-semibold"><span class="text-white">And just </span><span class="bg-pink-400 font-bold">play!</span></p>
+            </div>
+            <div class="grid grid-flow-col w-64 h-24 gap-2">
+             <div class="bg-white w-16 h-16 rounded-full flex items-center justify-center hover:bg-black cursor-pointer"><img src="../src/images/reddit.png" class="w-10"></div>
+             <div class="bg-white w-16 h-16 rounded-full flex items-center justify-center hover:bg-black cursor-pointer"><img src="../src/images/discord.png" class="w-10"></div>
+             <div class="bg-white w-16 h-16 rounded-full flex items-center justify-center hover:bg-black cursor-pointer"><img src="../src/images/twitter.png" class="w-10"></div>
+            </div>
+        </div>
+        <!--Style for col-2-->
+        <div class="bg-white h-screen pt-5 lg:pt-40">
+    
+            <div class="sm:shadow-none boder-none lg:border rounded-xl p-10 w-96 m-auto lg:shadow">
+                <div class="bg-gray-50 w-full p-5 text-center rounded-lg">
+                    <ul class="list-none space-x-10">
+                        <li class="inline-flex"><a class="text-2xl font-bold" href="index.html">Sign in</a></li>
+                        <li class="inline-flex"><a class="text-2xl p-2 font-bold text-white rounded-md bg-red-500 shadow-md" href="#">Register</a></li>
+                    </ul>
+                </div>
+                <form action="index.html" class="grid py-10 place-content-center gap-2">
+                    <label for="name" class="py-1"><span class="font-semibold">Name</span></label>
+                    <input class="w-72 h-10 pl-3 rounded-md border-2 border-indigo-700 focus:outline-none focus:ring focus:border-blue-500" type="text" placeholder=" Type here">
+                    <label for="email" class="py-1"><span class="font-semibold">Email</span></label>
+                    <input class="w-72 h-10 pl-3 rounded-md border-2 border-indigo-700 focus:outline-none focus:ring focus:border-blue-500" type="email" placeholder=" Type here">
+                    <label for="password" class="py-1"><span class="font-semibold">Password</span></label>
+                    <input class="w-72 h-10 pl-3 rounded-md border-2 border-indigo-700 focus:outline-none focus:ring focus:border-blue-500" type="password" placeholder=" Type here">
+                    <label for="password" class="py-1"><span class="font-semibold">Confirm Password</span></label>
+                    <input class="w-72 h-10 pl-3 rounded-md border-2 border-indigo-700 focus:outline-none focus:ring focus:border-blue-500" type="password" placeholder=" Type here">
+                    <input class="w-72 h-10 mt-5 font-bold text-white rounded-md bg-green-500 border-gray-300 shadow hover:bg-gray-500 cursor-pointer" type="submit" value="Register">
+                </form>
+            </div>
+                
+        </div>
+    </div>
+    <script src="../src/main.js"></script>
+</body>
+
+</html>
